@@ -40,7 +40,7 @@ findViewById(R.id.btn_call).setOnClickListener(new View.OnClickListener() {
 Android 框架从 Android 6.0（API 级别 23）开始提供了**检查和请求权限**的方法,不过我们通常使用support库来完成,因为使用支持库更简单，因为在调用方法前，应用不需要检查它在哪个版本的 Android 上运行。   
 
 ### 检查权限
-我们需要`ContextCompat`类的[`checkSelfPermission`](https://developer.android.com/reference/android/support/v4/content/ContextCompat.html#checkSelfPermission(android.content.Context, java.lang.String))方法来检查当前手机是否拥有某个权限
+我们需要`ContextCompat`类的 [`checkSelfPermission`](https://developer.android.com/reference/android/support/v4/content/ContextCompat.html#checkSelfPermission\(android.content.Context\, java.lang.String\)) 方法来检查当前手机是否拥有某个权限
   
 我们来调整我们的代码  
 
@@ -137,7 +137,7 @@ Android 框架从 Android 6.0（API 级别 23）开始提供了**检查和请求
         }
 ```
 
-####关于`shouldShowRequestPermissionRationale()`的返回值
+#### 关于`shouldShowRequestPermissionRationale()`的返回值
 **True**   
 
 * 如果用户之前拒绝了权限的申请就会返回true(如果在拒绝的同时勾选了‘不在询问’，则返回的是false)
