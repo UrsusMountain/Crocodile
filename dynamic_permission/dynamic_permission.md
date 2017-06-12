@@ -101,15 +101,15 @@ Android 框架从 Android 6.0（API 级别 23）开始提供了**检查和请求
 拨打电话，进入应用的权限管理页面，发现应用已经有次权限，下次用到该权限时，在检查权限阶段就会自动通过检测。
 
 #### 拒绝  
-**普通拒绝 ：**会执行我们在上面代码中“申请拒绝”处的部分，下次在申请时，申请权限的对话框会多出现一个‘不在询问’的勾选框。
+**普通拒绝 ：** 会执行我们在上面代码中“申请拒绝”处的部分，下次在申请时，申请权限的对话框会多出现一个‘不在询问’的勾选框。
 
 ![](image/N003.png)  
 
-**不在询问 + 拒绝 ：**下次申请权限，不会弹出，直接拒绝，相当于系统帮你点击了拒绝，再想获得该权限，就只有手动到应用权限管理界面处理
+**不在询问 + 拒绝 ：** 下次申请权限，不会弹出，直接拒绝，相当于系统帮你点击了拒绝，再想获得该权限，就只有手动到应用权限管理界面处理
 
 ### 提示用户  
 
-有时候我们需要向用户解释为什么我们需要改该权限，Android官方建议我们不要提供过多的解释，只需在用户之前拒绝过该项权限，然后再次申请的时候提供解释。于是官方给我们提供了这么一个方法[`shouldShowRequestPermissionRationale()`](https://developer.android.com/reference/android/support/v4/app/ActivityCompat.html#shouldShowRequestPermissionRationale(android.app.Activity, java.lang.String))。
+有时候我们需要向用户解释为什么我们需要改该权限，Android官方建议我们不要提供过多的解释，只需在用户之前拒绝过该项权限，然后再次申请的时候提供解释。于是官方给我们提供了这么一个方法 [`shouldShowRequestPermissionRationale()`](https://developer.android.com/reference/android/support/v4/app/ActivityCompat.html#shouldShowRequestPermissionRationale(android.app.Activity, java.lang.String))。
 
 下面的代码，弹了一个对话来模拟一下提示
 
