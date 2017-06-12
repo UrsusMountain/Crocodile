@@ -40,7 +40,7 @@ findViewById(R.id.btn_call).setOnClickListener(new View.OnClickListener() {
 Android 框架从 Android 6.0（API 级别 23）开始提供了**检查和请求权限**的方法,不过我们通常使用support库来完成,因为使用支持库更简单，因为在调用方法前，应用不需要检查它在哪个版本的 Android 上运行。   
 
 ### 检查权限
-我们需要`ContextCompat`类的 [`checkSelfPermission`](https://developer.android.com/reference/android/support/v4/content/ContextCompat.html#checkSelfPermission\(android.content.Context\, java.lang.String\)) 方法来检查当前手机是否拥有某个权限
+我们需要`ContextCompat`类的 [`checkSelfPermission`](https://developer.android.com/reference/android/support/v4/content/ContextCompat.html#checkSelfPermission(android.content.Context,%20java.lang.String)) 方法来检查当前手机是否拥有某个权限
   
 我们来调整我们的代码  
 
@@ -67,9 +67,9 @@ Android 框架从 Android 6.0（API 级别 23）开始提供了**检查和请求
 
 ### 请求权限
 
-我们需要`ActivityCompat`类的[`requestPermissions`](https://developer.android.com/reference/android/support/v4/app/ActivityCompat.html#requestPermissions(android.app.Activity, java.lang.String[], int))方法来申请我么需要的权限，这个方法每次申请的是权限字符串的数组，也就是每次可以申请多个权限。申请完之后，我们需要处理申请的结果，是同意还是拒绝。  
+我们需要`ActivityCompat`类的 [`requestPermissions`](https://developer.android.com/reference/android/support/v4/app/ActivityCompat.html#requestPermissions(android.app.Activity,%20java.lang.String%5B%5D,%20int)) 方法来申请我么需要的权限，这个方法每次申请的是权限字符串的数组，也就是每次可以申请多个权限。申请完之后，我们需要处理申请的结果，是同意还是拒绝。  
   
-当用户响应我们申请的权限时，系统将调用应用的 [`onRequestPermissionsResult`](https://developer.android.com/reference/android/support/v4/app/ActivityCompat.OnRequestPermissionsResultCallback.html#onRequestPermissionsResult(int, java.lang.String[], int[]))，我们重写这个方法来处理申请的结果(类似 activity 跳转中的 `onActivityResult`)
+当用户响应我们申请的权限时，系统将调用应用的 [`onRequestPermissionsResult`](https://developer.android.com/reference/android/support/v4/app/ActivityCompat.OnRequestPermissionsResultCallback.html#onRequestPermissionsResult(int,%20java.lang.String%5B%5D,%20int%5B%5D)) ，我们重写这个方法来处理申请的结果(类似 activity 跳转中的 `onActivityResult`)
 
 再来调整一下代码
 
@@ -109,7 +109,7 @@ Android 框架从 Android 6.0（API 级别 23）开始提供了**检查和请求
 
 ### 提示用户  
 
-有时候我们需要向用户解释为什么我们需要改该权限，Android官方建议我们不要提供过多的解释，只需在用户之前拒绝过该项权限，然后再次申请的时候提供解释。于是官方给我们提供了这么一个方法 [`shouldShowRequestPermissionRationale()`](https://developer.android.com/reference/android/support/v4/app/ActivityCompat.html#shouldShowRequestPermissionRationale(android.app.Activity, java.lang.String))。
+有时候我们需要向用户解释为什么我们需要改该权限，Android官方建议我们不要提供过多的解释，只需在用户之前拒绝过该项权限，然后再次申请的时候提供解释。于是官方给我们提供了这么一个方法 [`shouldShowRequestPermissionRationale()`](https://developer.android.com/reference/android/support/v4/app/ActivityCompat.html#shouldShowRequestPermissionRationale(android.app.Activity,%20java.lang.String))。
 
 下面的代码，弹了一个对话来模拟一下提示
 
