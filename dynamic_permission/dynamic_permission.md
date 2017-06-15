@@ -166,7 +166,7 @@ Android 框架从 Android 6.0（API 级别 23）开始提供了**检查和请求
 
 ##### 这是一个通过链式调用和异步回调的方式完成运行时权限的工作的库
 
-####简单使用
+#### 简单使用
 下面的代码是使用 addPermission 库的重新实现一遍拨打电话的需求。
 
 ```java
@@ -342,7 +342,8 @@ Error:Execution failed for task ':app:processDebugManifest'.
 [解决方案](https://stackoverflow.com/questions/42949974/android-support-repo-46-0-0-with-android-studio-2-3/42957234#42957234)  
 [官方文档](https://developer.android.com/studio/build/manifest-merge.html)
   
---
+---
+
 ### [PermissionsDispatcher](https://github.com/hotchemi/PermissionsDispatcher) 
 ##### 这是一个通过注解的方式完成运行时权限的工作的库
 
