@@ -1,6 +1,8 @@
 package cn.com.ursus.crocodile.dynamicpermissiondemo;
 
 import android.Manifest;
+import android.app.Activity;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -75,5 +77,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 return;
             }
         }
+    }
+
+    public static void launch(Context context) {
+        Intent intent = new Intent(context, MainActivity.class);
+        if (!(context instanceof Activity)) {
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        }
+        context.startActivity(intent);
     }
 }

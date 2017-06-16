@@ -13,3 +13,5 @@ P
 Papp/src/main/java/cn/com/ursus/crocodile/dynamicpermissiondemo/MainActivity.java,e/4/e4bc16bd47dffb48dc25441b2366400c2fa4e072
 ‰
 Yapp/src/main/java/cn/com/ursus/crocodile/dynamicpermissiondemo/AddPermissionActivity.java,d/3/d3f754a450433ad8361476d75d4b3d8a0587bd45
+ƒ
+Sapp/src/main/java/cn/com/ursus/crocodile/dynamicpermissiondemo/WelcomeActivity.java,2/d/2d6be6cff9c9602d6df50eacfb75b7f457296deb

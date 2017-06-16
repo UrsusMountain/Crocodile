@@ -2,17 +2,15 @@ package cn.com.ursus.crocodile.dynamicpermissiondemo;
 
 import android.Manifest;
 import android.app.Activity;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.view.Window;
-import android.view.WindowManager;
 import android.widget.Toast;
 
 import com.yanzhenjie.permission.AndPermission;
@@ -111,5 +109,13 @@ public class AddPermissionActivity extends AppCompatActivity implements View.OnC
                 break;
             }
         }
+    }
+
+    public static void launch(Context context) {
+        Intent intent = new Intent(context, AddPermissionActivity.class);
+        if (!(context instanceof Activity)) {
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        }
+        context.startActivity(intent);
     }
 }
